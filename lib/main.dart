@@ -30,49 +30,27 @@ class Signup_Call extends StatefulWidget {
 class _Signup_CallState extends State<Signup_Call> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // backgroundColor: Colors.greenAccent,
-      appBar: AppBar(
-        title: const Text('Signup_Page'),
-      ),
-      body: Container(
-        color: Colors.greenAccent,
-        child: Center(
-          child: GestureDetector(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Login_page()));
-              child:
-              print("This is on click ok");
-            },
-            child: Container(
-              height: 50,
-              width: 190,
-              decoration: BoxDecoration(
-                color: Colors.pink,
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.black,
-                    spreadRadius: 2,
-                    blurRadius: 7,
-                    offset: Offset(4, 4),
-                  )
-                ],
-              ),
-              child: const Center(
-                child: Text(
-                  "Sign in",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30),
-                ),
+    return Column(
+      children: [
+        Text(
+          "WELCOME TO EDU",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        // SizedBox(height: defaultPadding * 2),
+        Row(
+          children: [
+            Spacer(),
+            Expanded(
+              flex: 8,
+              child:Image.asset(
+                "assets/images/img.png",
               ),
             ),
-          ),
+            Spacer(),
+          ],
         ),
-      ),
+        // SizedBox(height: defaultPadding * 2),
+      ],
     );
   }
 }
