@@ -30,27 +30,29 @@ class Signup_Call extends StatefulWidget {
 class _Signup_CallState extends State<Signup_Call> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          "WELCOME TO EDU",
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-        // SizedBox(height: defaultPadding * 2),
-        Row(
-          children: [
-            Spacer(),
-            Expanded(
-              flex: 8,
-              child:Image.asset(
-                "assets/images/img.png",
+    return Scaffold(
+      body: Column(
+        children: [
+          const Text(
+            "Welcome",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          // SizedBox(height: defaultPadding * 2),
+          Row(
+            children: [
+              const Spacer(),
+              Expanded(
+                flex: 8,
+                child: Image.asset(
+                  "assets/images/img.png",
+                ),
               ),
-            ),
-            Spacer(),
-          ],
-        ),
-        // SizedBox(height: defaultPadding * 2),
-      ],
+              Spacer(),
+            ],
+          ),
+          // SizedBox(height: defaultPadding * 2),
+        ],
+      ),
     );
   }
 }
